@@ -1,4 +1,4 @@
-<?xml?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <Basketball_Shop>
 	<Products>
@@ -92,8 +92,8 @@
 			<Email>ivHolo@gmail.com</Email>
 		</Customer>
 	</Customers>
-		<Orders>
-		<Order cust_id="2202">
+	<Orders>
+		<Order cust_id="2202" deliv_id="301">
 			<Item prod_id="3002">
 				<Quanity>2</Quanity>
 			</Item>
@@ -101,17 +101,17 @@
 				<Quanity>5</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2205">
+		<Order cust_id="2205" deliv_id="303">
 			<Item prod_id="3003">
 				<Quanity>1</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2203">
+		<Order cust_id="2203" deliv_id="303">
 			<Item prod_id="3005">
 				<Quanity>4</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2201">
+		<Order cust_id="2201" deliv_id="302">
 			<Item prod_id="3006">
 				<Quanity>12</Quanity>
 			</Item>
@@ -119,7 +119,7 @@
 				<Quanity>5</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2204">
+		<Order cust_id="2204" deliv_id="302">
 			<Item prod_id="3007">
 				<Quanity>1</Quanity>
 			</Item>
