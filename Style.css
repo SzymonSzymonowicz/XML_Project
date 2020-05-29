@@ -1,0 +1,214 @@
+Basketball_Shop
+{
+    display: flex;
+    padding: 10px;
+    border: dotted 2px;
+    background-color: #e8ddc8;
+    width: max-content;
+    margin: 10px;
+	align-self: center;
+}
+
+Products, Categories, Customers, Orders, DeliveryCompanies, Suppliers, Adresses, Producers
+{
+    height: 100%;
+    margin: 10px 10px;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    vertical-align: middle;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #ebcc83;
+	width: auto
+}
+
+Products::before
+{
+    content:"Products";
+}
+Categories::before
+{
+    content:"Categories";
+}
+Customers::before
+{
+    content:"Customers";
+}
+DeliveryCompanies::before
+{
+    content:"DeliveryCompanies";
+}
+Suppliers::before
+{
+    content:"Suppliers";
+}
+Adresses::before
+{
+    content:"Adresses";
+}
+Producers::before
+{
+    content:"Producers";
+}
+Orders::before
+{
+    content:"Orders";
+}
+
+Products::before, Categories::before, Customers::before, DeliveryCompanies::before, Suppliers::before, Adresses::before, Producers::before, Orders::before
+{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  font-family: "Times New Roman";
+}
+
+
+Product:first-of-type, Category:first-of-type, Customer:first-of-type, Order:first-of-type, DelivComp:first-of-type, Supplier:first-of-type, Adress:first-of-type, Producer:first-of-type{
+    margin: 0px;
+}
+
+Product, Category, Customer, Order, DelivComp, Supplier, Adress, Producer
+{
+    display: table;
+    padding: 10px;
+    border: solid 1px;
+    margin: 5px 0px 0px 0px;
+    background-color: #63e3ecc2;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	white-space: nowrap;
+}
+
+Product *, Category *, Customer *, Order *, DelivComp *, Supplier *, Adress *, Producer *{
+	display: block;
+}
+
+Product:hover, Category:hover, Customer:hover, Order:hover, DelivComp:hover, Supplier:hover, Adress:hover, Producer:hover{
+    background-color: #ec6563;
+}
+
+Product::before {content: "prod_id: " attr(prod_id);}
+Category::before{content: "cat_id: " attr(cat_id);}
+Customer::before{content: "cust_id: " attr(cust_id);}
+Order::before{content: "ord_id: " attr(ord_id);}
+DelivComp::before{content: "prod_id: " attr(deliv_id);}
+Supplier::before{content: "prod_id: " attr(sup_id);}
+Adress::before{content: "prod_id: " attr(adr_id);}
+Producer::before{content: "prod_id: " attr(pdc_id);}
+
+Product::before, Category::before, Customer::before, Order::before, DelivComp::before, Supplier::before, Adress::before, Producer::before
+{
+    display: block;
+	width: auto;
+	font-style: italic;
+
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	font-family: "Times New Roman";
+}
+
+Product > Name::before, Category > Name::before, Customer > Name::before, DelivComp > Name::before, Supplier > Name::before, Producer > Name::before
+{
+    content:"Name:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+
+Product > Price::before
+{
+    content:"Price:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+Product > Description::before
+{
+    content:"Description:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+
+Customer > Surname::before
+{
+    content:"Surname:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+Customer > PhoneNo::before
+{
+    content:"PhoneNo:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+Customer > Email::before
+{
+    content:"Email:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+
+DelivComp > Shortcut::before
+{
+    content:"Shortcut:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+
+Adress > Country::before
+{
+    content:"Country:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+Adress > City::before
+{
+    content:"City:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+Adress > ZipCode::before
+{
+    content:"ZipCode:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+Adress > Street::before
+{
+    content:"Street:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}
+
+Order > Item::before
+{
+    content:"prod_id:  " attr(prod_id);
+    white-space: pre;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: petite-caps;
+    border-top: solid 4px #ffffff;
+    display: block;
+    margin-top: 4px;
+    padding: 4px 0px;
+}
+Order > Item > Quanity::before
+{
+    content:"Quanity:  ";
+    white-space: pre;
+    font-weight: bold;
+    font-variant: petite-caps;
+}

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="Style.css" ?>
 
 <Basketball_Shop>
 	<Products>
@@ -93,7 +94,7 @@
 		</Customer>
 	</Customers>
 	<Orders>
-		<Order cust_id="2202" deliv_id="301">
+		<Order cust_id="2202" deliv_id="301" ord_id="7001">
 			<Item prod_id="3002">
 				<Quanity>2</Quanity>
 			</Item>
@@ -101,17 +102,17 @@
 				<Quanity>5</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2205" deliv_id="303">
+		<Order cust_id="2205" deliv_id="303" ord_id="7002">
 			<Item prod_id="3003">
 				<Quanity>1</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2203" deliv_id="303">
+		<Order cust_id="2203" deliv_id="303" ord_id="7003">
 			<Item prod_id="3005">
 				<Quanity>4</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2201" deliv_id="302">
+		<Order cust_id="2201" deliv_id="302" ord_id="7004">
 			<Item prod_id="3006">
 				<Quanity>12</Quanity>
 			</Item>
@@ -119,7 +120,7 @@
 				<Quanity>5</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2204" deliv_id="302">
+		<Order cust_id="2204" deliv_id="302" ord_id="7005">
 			<Item prod_id="3007">
 				<Quanity>1</Quanity>
 			</Item>
@@ -199,7 +200,7 @@
 			<Name>Nike</Name>
 		</Producer>
 		<Producer pdc_id="703">
-			<Name>Mitchell & Ness</Name>
+			<Name>Mitchell &amp; Ness</Name>
 		</Producer>
 		<Producer pdc_id="704">
 			<Name>Jordan</Name>
