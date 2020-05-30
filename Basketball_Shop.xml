@@ -1,92 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/css" href="Style.css" ?>
+<!DOCTYPE Basketball_Shop SYSTEM "Basketball_Shop.dtd">
 
 <Basketball_Shop>
 	<Products>
-		<Product prod_id="3001" sup_id="73" cat_id="23" pdc_id="703">
+		<Product prod_id="_3001" sup_id="_73" cat_id="_23" pdc_id="_703">
 			<Name>MJ Jersey</Name>
 			<Price>323.23</Price>
 			<Description>Koszulka Jordana</Description>
 		</Product>
-		<Product prod_id="3002" sup_id="72" cat_id="22" pdc_id="702">
+		<Product prod_id="_3002" sup_id="_72" cat_id="_22" pdc_id="_702">
 			<Name>Kobe VIII</Name>
 			<Price>420.00</Price>
 			<Description>Buty Kobe</Description>
 		</Product>
-		<Product prod_id="3003" sup_id="72" cat_id="22" pdc_id="704">
+		<Product prod_id="_3003" sup_id="_72" cat_id="_22" pdc_id="_704">
 			<Name>Air Jordan 11</Name>
 			<Price>520.00</Price>
 			<Description>Buty Kobe</Description>
 		</Product>
-		<Product prod_id="3004" sup_id="73" cat_id="24" pdc_id="703">
+		<Product prod_id="_3004" sup_id="_73" cat_id="_24" pdc_id="_703">
 			<Name>Nike Rubberband</Name>
 			<Price>32.00</Price>
 			<Description>Opaska Nike</Description>
 		</Product>
-		<Product prod_id="3005" sup_id="73" cat_id="25" pdc_id="703">
+		<Product prod_id="_3005" sup_id="_73" cat_id="_25" pdc_id="_703">
 			<Name>Czapka Heat</Name>
 			<Price>110.00</Price>
 			<Description>Czapka</Description>
 		</Product>
-		<Product prod_id="3006" sup_id="74" cat_id="21" pdc_id="705">
+		<Product prod_id="_3006" sup_id="_74" cat_id="_21" pdc_id="_705">
 			<Name>TF-500</Name>
 			<Price>200.00</Price>
 			<Description>Pilka Spalding</Description>
 		</Product>
-		<Product prod_id="3007" sup_id="74" cat_id="21" pdc_id="705">
+		<Product prod_id="_3007" sup_id="_74" cat_id="_21" pdc_id="_705">
 			<Name>TF-250</Name>
 			<Price>130.00</Price>
 			<Description>Pilka Spalding</Description>
 		</Product>
-		<Product prod_id="3008" sup_id="71" cat_id="22" pdc_id="701">
+		<Product prod_id="_3008" sup_id="_71" cat_id="_22" pdc_id="_701">
 			<Name>Harden 4</Name>
 			<Price>550.00</Price>
 			<Description>Buty Adidas</Description>
 		</Product>
 	</Products>
 	<Categories>
-		<Category cat_id="21">
+		<Category cat_id="_21">
 			<Name>Pilki</Name>
 		</Category>
-		<Category cat_id="22">
+		<Category cat_id="_22">
 			<Name>Buty</Name>
 		</Category>
-		<Category cat_id="23">
+		<Category cat_id="_23">
 			<Name>Jerseye</Name>
 		</Category>
-		<Category cat_id="24">
+		<Category cat_id="_24">
 			<Name>Opaski</Name>
 		</Category>
-		<Category cat_id="25">
+		<Category cat_id="_25">
 			<Name>Inne</Name>
 		</Category>
 	</Categories>
 	<Customers>
-		<Customer cust_id="2201" adr_id="1101">
+		<Customer cust_id="_2201" adr_id="_1101">
 			<Name>Jan</Name>
 			<Surname>Kowalski</Surname>
 			<PhoneNo>520661331</PhoneNo>
 			<Email>jkowal2@wp.pl</Email>
 		</Customer>
-		<Customer cust_id="2202" adr_id="1102">
+		<Customer cust_id="_2202" adr_id="_1102">
 			<Name>Artur</Name>
 			<Surname>Nowak</Surname>
 			<PhoneNo>510532125</PhoneNo>
 			<Email>r2d2@sw.com</Email>
 		</Customer>
-		<Customer cust_id="2203" adr_id="1103">
+		<Customer cust_id="_2203" adr_id="_1103">
 			<Name>Franciszek</Name>
 			<Surname>Dolas</Surname>
 			<PhoneNo>507815705</PhoneNo>
 			<Email>grzegorzBrzeczyszczykiewicz@jrdws.pl</Email>
 		</Customer>
-		<Customer cust_id="2204" adr_id="1104">
+		<Customer cust_id="_2204" adr_id="_1104">
 			<Name>Klaus</Name>
 			<Surname>Wunder</Surname>
 			<PhoneNo>4915218741679</PhoneNo>
 			<Email>klauwund@web.de</Email>
 		</Customer>
-		<Customer cust_id="2205" adr_id="1105">
+		<Customer cust_id="_2205" adr_id="_1105">
 			<Name>Iveta</Name>
 			<Surname>Hololova</Surname>
 			<PhoneNo>421908999471</PhoneNo>
@@ -94,98 +95,98 @@
 		</Customer>
 	</Customers>
 	<Orders>
-		<Order cust_id="2202" deliv_id="301" ord_id="7001">
-			<Item prod_id="3002">
+		<Order cust_id="_2202" deliv_id="_301" ord_id="_7001">
+			<Item prod_id="_3002">
 				<Quanity>2</Quanity>
 			</Item>
-			<Item prod_id="3004">
+			<Item prod_id="_3004">
 				<Quanity>5</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2205" deliv_id="303" ord_id="7002">
-			<Item prod_id="3003">
+		<Order cust_id="_2205" deliv_id="_303" ord_id="_7002">
+			<Item prod_id="_3003">
 				<Quanity>1</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2203" deliv_id="303" ord_id="7003">
-			<Item prod_id="3005">
+		<Order cust_id="_2203" deliv_id="_303" ord_id="_7003">
+			<Item prod_id="_3005">
 				<Quanity>4</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2201" deliv_id="302" ord_id="7004">
-			<Item prod_id="3006">
+		<Order cust_id="_2201" deliv_id="_302" ord_id="_7004">
+			<Item prod_id="_3006">
 				<Quanity>12</Quanity>
 			</Item>
-			<Item prod_id="3008">
+			<Item prod_id="_3008">
 				<Quanity>5</Quanity>
 			</Item>
 		</Order>
-		<Order cust_id="2204" deliv_id="302" ord_id="7005">
-			<Item prod_id="3007">
+		<Order cust_id="_2204" deliv_id="_302" ord_id="_7005">
+			<Item prod_id="_3007">
 				<Quanity>1</Quanity>
 			</Item>
-			<Item prod_id="3003">
+			<Item prod_id="_3003">
 				<Quanity>3</Quanity>
 			</Item>
-			<Item prod_id="3001">
+			<Item prod_id="_3001">
 				<Quanity>2</Quanity>
 			</Item>
 		</Order>
 	</Orders>
 	<DeliveryCompanies>
-		<DelivComp deliv_id="301">
+		<DelivComp deliv_id="_301">
 			<Name>DHL International</Name>
 			<Shortcut>DHL</Shortcut>
 		</DelivComp>
-		<DelivComp deliv_id="302">
+		<DelivComp deliv_id="_302">
 			<Name>DPD group</Name>
 			<Shortcut>DPD</Shortcut>
 		</DelivComp>
-		<DelivComp deliv_id="303">
+		<DelivComp deliv_id="_303">
 			<Name>FedEx</Name>
 			<Shortcut>FED</Shortcut>
 		</DelivComp>
 	</DeliveryCompanies>
 	<Suppliers>
-		<Supplier sup_id="71">
+		<Supplier sup_id="_71">
 			<Name>Adidas Polska</Name>
 		</Supplier>
-		<Supplier sup_id="72">
+		<Supplier sup_id="_72">
 			<Name>Nike EU</Name>
 		</Supplier>
-		<Supplier sup_id="73">
+		<Supplier sup_id="_73">
 			<Name>MN EU</Name>
 		</Supplier>
-		<Supplier sup_id="74">
+		<Supplier sup_id="_74">
 			<Name>Spalding corp</Name>
 		</Supplier>
 	</Suppliers>
 	<Adresses>
-		<Adress adr_id="1101">
+		<Adress adr_id="_1101">
 			<Country>Poland</Country>
 			<City>Braniewo</City>
 			<ZipCode>14500</ZipCode>
 			<Street>Elblaska 12a/1</Street>
 		</Adress>
-		<Adress adr_id="1102">
+		<Adress adr_id="_1102">
 			<Country>Poland</Country>
 			<City>Elblag</City>
 			<ZipCode>82303</ZipCode>
 			<Street>3 Maja 12</Street>
 		</Adress>
-		<Adress adr_id="1103">
+		<Adress adr_id="_1103">
 			<Country>Poland</Country>
 			<City>Gdansk</City>
 			<ZipCode>80292</ZipCode>
 			<Street>Goralska 39/13</Street>
 		</Adress>
-		<Adress adr_id="1104">
+		<Adress adr_id="_1104">
 			<Country>Germany</Country>
 			<City>Oldenburg</City>
 			<ZipCode>26133</ZipCode>
 			<Street>Wacholderweg 52a</Street>
 		</Adress>
-		<Adress adr_id="1105">
+		<Adress adr_id="_1105">
 			<Country>Slovenia</Country>
 			<City>Bratislava</City>
 			<ZipCode>01001</ZipCode>
@@ -193,19 +194,19 @@
 		</Adress>
 	</Adresses>
 	<Producers>
-		<Producer pdc_id="701">
+		<Producer pdc_id="_701">
 			<Name>Adidas</Name>
 		</Producer>
-		<Producer pdc_id="702">
+		<Producer pdc_id="_702">
 			<Name>Nike</Name>
 		</Producer>
-		<Producer pdc_id="703">
+		<Producer pdc_id="_703">
 			<Name>Mitchell &amp; Ness</Name>
 		</Producer>
-		<Producer pdc_id="704">
+		<Producer pdc_id="_704">
 			<Name>Jordan</Name>
 		</Producer>
-		<Producer pdc_id="705">
+		<Producer pdc_id="_705">
 			<Name>Spalding</Name>
 		</Producer>
 	</Producers>

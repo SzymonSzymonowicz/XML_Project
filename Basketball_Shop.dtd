@@ -1,0 +1,67 @@
+<!ENTITY % pc "#PCDATA">
+<!ENTITY % req "#REQUIRED">
+
+<!ELEMENT Basketball_Shop   (Products, Categories, Customers, Orders, DeliveryCompanies,
+							Suppliers, Adresses, Producers)>
+
+<!ELEMENT Products    		(Product*)>
+<!ELEMENT Product    		(Name, Price, Description?)>
+<!ELEMENT Name   		   	(%pc;)>
+<!ELEMENT Price      		(%pc;)>
+<!ELEMENT Description      	(%pc;)>
+
+<!ATTLIST Product prod_id ID   %req;>
+<!ATTLIST Product sup_id IDREF %req;>
+<!ATTLIST Product cat_id IDREF %req;>
+<!ATTLIST Product pdc_id IDREF %req;>
+
+
+<!ELEMENT Categories		(Category*)>
+<!ELEMENT Category			(Name)>
+<!ATTLIST Category cat_id ID %req;>
+
+
+<!ELEMENT Customers			(Customer*)>
+<!ELEMENT Customer			(Name, Surname, PhoneNo, Email)>
+<!ELEMENT Surname			(%pc;)>
+<!ELEMENT PhoneNo			(%pc;)>
+<!ELEMENT Email				(%pc;)>
+
+<!ATTLIST Customer cust_id ID %req;>
+<!ATTLIST Customer adr_id IDREF %req;>
+
+
+<!ELEMENT Orders			(Order*)>
+<!ELEMENT Order				(Item+)>
+<!ELEMENT Item				(Quanity)>
+<!ELEMENT Quanity			(%pc;)>
+
+<!ATTLIST Order ord_id ID 		%req;>
+<!ATTLIST Order cust_id IDREF 	%req;>
+<!ATTLIST Order deliv_id IDREF 	%req;>
+<!ATTLIST Item prod_id IDREF 	%req;>
+
+
+<!ELEMENT DeliveryCompanies (DelivComp*)>
+<!ELEMENT DelivComp			(Name, Shortcut?)>
+<!ELEMENT Shortcut			(%pc;)>
+<!ATTLIST DelivComp deliv_id ID %req;>
+
+
+<!ELEMENT Suppliers			(Supplier*)>
+<!ELEMENT Supplier			(Name)>
+<!ATTLIST Supplier sup_id ID %req;>
+
+
+<!ELEMENT Adresses			(Adress*)>
+<!ELEMENT Adress			(Country, City, ZipCode, Street)>
+<!ELEMENT Country			(%pc;)>
+<!ELEMENT City				(%pc;)>
+<!ELEMENT ZipCode			(%pc;)>
+<!ELEMENT Street			(%pc;)>
+<!ATTLIST Adress adr_id ID  %req;>
+
+
+<!ELEMENT Producers			(Producer*)>
+<!ELEMENT Producer			(Name)>
+<!ATTLIST Producer pdc_id ID %req;>
