@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+	<xsd:complexType name="prods_type">
+		<xsd:sequence>
+			<xsd:element name="Product" type="pr_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+
+
+	<xsd:complexType name="BS_type">
+		<xsd:sequence>
+			<xsd:element name="Products" type="prods_type"/>
+			<xsd:element name="Categories" type="cats_type"/>
+			<xsd:element name="Customers" type="custs_type"/>
+			<xsd:element name="Orders" type="ords_type"/>
+			<xsd:element name="DeliveryCompanies" type="delivs_type"/>
+			<xsd:element name="Suppliers" type="sups_type"/>
+			<xsd:element name="Adresses" type="adrs_type"/>
+			<xsd:element name="Producers" type="pdcs_type"/>
+		</xsd:sequence>	
+	</xsd:complexType>
+
+
+	<xsd:element name="Basketball_Shop" type="BS_type">
+		<xsd:key name="prod_key">
+			<xsd:selector xpath="./Products/Product" /> 
+			<xsd:field xpath="@prod_id" /> 
+		</xsd:key>
+		
+		<xsd:key name="cat_key">
+			<xsd:selector xpath="./Categories/Category" /> 
+			<xsd:field xpath="@cat_id" /> 
+		</xsd:key>
+		
+		<xsd:key name="cust_key">
+			<xsd:selector xpath="./Customers/Customer" /> 
+			<xsd:field xpath="@cust_id" /> 
+		</xsd:key>
+		
+		<xsd:key name="ord_key">
+			<xsd:selector xpath="./Orders/Order" /> 
+			<xsd:field xpath="@ord_id" /> 
+		</xsd:key>
+		
+		<xsd:key name="deliv_key">
+			<xsd:selector xpath="./DeliveryCompanies/DelivComp" /> 
+			<xsd:field xpath="@deliv_id" /> 
+		</xsd:key>
+		
+		<xsd:key name="sup_key">
+			<xsd:selector xpath="./Suppliers/Supplier" /> 
+			<xsd:field xpath="@sup_id" /> 
+		</xsd:key>
+		
+		<xsd:key name="adr_key">
+			<xsd:selector xpath="./Adresses/Adress" /> 
+			<xsd:field xpath="@adr_id" /> 
+		</xsd:key>
+		
+		<xsd:key name="pdc_key">
+			<xsd:selector xpath="./Producers/Producer" /> 
+			<xsd:field xpath="@pdc_id" /> 
+		</xsd:key>
+		
+
+		<xsd:keyref name="sup_keyRef" refer="sup_key">
+			<xsd:selector xpath="./Products/Product" /> 
+			<xsd:field xpath="@sup_id" />
+		</xsd:keyref>
+		
+		<xsd:keyref name="cat_keyRef" refer="cat_key">
+			<xsd:selector xpath="./Products/Product" /> 
+			<xsd:field xpath="@cat_id" />
+		</xsd:keyref>
+		
+		<xsd:keyref name="pdc_keyRef" refer="pdc_key">
+			<xsd:selector xpath="./Products/Product" /> 
+			<xsd:field xpath="@pdc_id" />
+		</xsd:keyref>
+		
+		
+		<xsd:keyref name="adr_keyRef" refer="adr_key">
+			<xsd:selector xpath="./Customers/Customer" /> 
+			<xsd:field xpath="@adr_id" />
+		</xsd:keyref>
+		
+		
+		<xsd:keyref name="deliv_keyRef" refer="deliv_key">
+			<xsd:selector xpath="./Orders/Order" /> 
+			<xsd:field xpath="@deliv_id" />
+		</xsd:keyref>
+		
+		<xsd:keyref name="cust_keyRef" refer="cust_key">
+			<xsd:selector xpath="./Orders/Order" /> 
+			<xsd:field xpath="@cust_id" />
+		</xsd:keyref>
+		
+		<xsd:keyref name="prod_keyRef" refer="prod_key">
+			<xsd:selector xpath="./Orders/Order/Item" /> 
+			<xsd:field xpath="@prod_id" />
+		</xsd:keyref>
+	</xsd:element>
+
+</xsd:schema>
