@@ -84,13 +84,13 @@
 		<Customer cust_id="_2204" adr_id="_1104">
 			<Name>Klaus</Name>
 			<Surname>Wunder</Surname>
-			<PhoneNo>4915218741679</PhoneNo>
+			<PhoneNo>+4915218741679</PhoneNo>
 			<Email>klauwund@web.de</Email>
 		</Customer>
 		<Customer cust_id="_2205" adr_id="_1105">
 			<Name>Iveta</Name>
 			<Surname>Hololova</Surname>
-			<PhoneNo>421908999471</PhoneNo>
+			<PhoneNo>+421908999471</PhoneNo>
 			<Email>ivHolo@gmail.com</Email>
 		</Customer>
 	</Customers>
