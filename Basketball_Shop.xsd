@@ -1,14 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
+	<xsd:complexType name="prod_type">
+		<xsd:sequence>
+			<xsd:element name="Name" type="name_type"/>
+			<xsd:element name="Price" type="price_type"/>
+			<xsd:element name="Description" type="desc_type"/>
+		</xsd:sequence>
+		<xsd:attribute name="prod_id" type="prod_id_type"/>
+		<xsd:attribute name="sup_id" type="sup_id_type"/>
+		<xsd:attribute name="cat_id" type="cat_id_type"/>
+		<xsd:attribute name="pdc_id" type="pdc_id_type"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="cat_type">
+		<xsd:sequence>
+			<xsd:element name="Name" type="name_type"/>
+		</xsd:sequence>
+		<xsd:attribute name="cat_id" type="cat_id_type"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="cust_type">
+		<xsd:sequence>
+			<xsd:element name="Name" type="name_type"/>
+			<xsd:element name="Surname" type="name_type"/>
+			<xsd:element name="PhoneNo" type="phone_type"/>
+			<xsd:element name="Email" type="email_type"/>
+		</xsd:sequence>
+		<xsd:attribute name="cust_id" type="cust_id_type"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="order_type">
+		<xsd:sequence>
+			<xsd:element name="Item" type="item_type" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="cust_id" type="cust_id_type"/>
+		<xsd:attribute name="deliv_id" type="deliv_id_type"/>
+		<xsd:attribute name="ord_id" type="ord_id_type"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="deliv_type">
+		<xsd:sequence>
+			<xsd:element name="Name" type="name_type"/>
+		</xsd:sequence>
+		<xsd:attribute name="deliv_id" type="deliv_id_type"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="sup_type">
+		<xsd:sequence>
+			<xsd:element name="Name" type="name_type"/>
+		</xsd:sequence>
+		<xsd:attribute name="sup_id" type="sup_id_type"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="adr_type">
+		<xsd:sequence>
+			<xsd:element name="Country" type="name_type"/>
+			<xsd:element name="City" type="name_type"/>
+			<xsd:element name="ZipCode" type="zip_type"/>
+			<xsd:element name="Street" type="str_type"/>
+		</xsd:sequence>
+		<xsd:attribute name="adr_id" type="adr_id_type"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="pdc_type">
+		<xsd:sequence>
+			<xsd:element name="Name" type="name_type"/>
+		</xsd:sequence>
+		<xsd:attribute name="pdc_id" type="pdc_id_type"/>
+	</xsd:complexType>
+	
 
 	<xsd:complexType name="prods_type">
 		<xsd:sequence>
-			<xsd:element name="Product" type="pr_type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Product" type="prod_type" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
-
-
+	
+	<xsd:complexType name="cats_type">
+		<xsd:sequence>
+			<xsd:element name="Category" type="cat_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="custs_type">
+		<xsd:sequence>
+			<xsd:element name="Customer" type="cust_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ords_type">
+		<xsd:sequence>
+			<xsd:element name="Order" type="ord_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="delivs_type">
+		<xsd:sequence>
+			<xsd:element name="DelivComp" type="deliv_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="sups_type">
+		<xsd:sequence>
+			<xsd:element name="Supplier" type="sup_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="adrs_type">
+		<xsd:sequence>
+			<xsd:element name="Adress" type="adr_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="pdcs_type">
+		<xsd:sequence>
+			<xsd:element name="Producer" type="pdc_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
 
 
 	<xsd:complexType name="BS_type">
