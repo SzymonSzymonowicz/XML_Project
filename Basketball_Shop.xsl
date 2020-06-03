@@ -7,11 +7,11 @@
 			<head>
 				<style>
 					table,th,td {border: 1px solid black; padding: 15px;margin: 0px;}
-					table{border-spacing: 0;border-collapse: collapse;text-align:center;}
+					table{opacity: 0.85;margin-left:auto;margin-right:auto;border-spacing: 0;border-collapse: collapse;text-align:center;background-color: white;}
 					th{background-color: black; color: white;}
-					<!--th, td { padding: 15px; border: 1px solid black;}-->
-				
-				
+					body{;background: rgb(255,255,255);
+					background: linear-gradient(60deg, rgba(255,255,255,1) 0%,
+					rgba(186,172,131,1) 35%, rgba(0,212,255,1) 100%);}
 				</style>	
 			</head>
 			<body>
@@ -73,6 +73,9 @@
 					</tr>
 				</table>
 				<br/>
+				<table>
+					<xsl:apply-templates select="Adresses"/>
+				</table>
 			</body>
 		</html>
 	</xsl:template>
@@ -95,4 +98,50 @@
 		</xsl:for-each>
 	</xsl:template>
 
+	<xsl:template match="Adresses">
+		<tr>
+			<th>
+				Adress id
+			</th>
+			<th>
+				Customer id
+			</th>
+			<th>
+				Country
+			</th>
+		</tr>
+		<xsl:for-each select="Adress">
+			<xsl:choose>
+				<xsl:when test="Country='Poland'">
+					<tr style="background-color:  #ff4d4d;">
+						<xsl:variable name="adr" select="@adr_id"/>
+						<td>
+							<xsl:value-of select="$adr"/>
+						</td>
+						<td>
+							<xsl:value-of select="../../Customers/Customer[@adr_id=$adr]/@cust_id"/>
+						</td>
+						<td>
+							<xsl:value-of select="Country"/>
+						</td>
+					</tr>
+				</xsl:when>
+				<xsl:otherwise>
+					<tr style="background-color:  #ccffcc;">
+						<xsl:variable name="adr" select="@adr_id"/>
+						<td>
+							<xsl:value-of select="$adr"/>
+						</td>
+						<td>
+							<xsl:value-of select="../../Customers/Customer[@adr_id=$adr]/@cust_id"/>
+						</td>
+						<td>
+							<xsl:value-of select="Country"/>
+						</td>
+					</tr>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:for-each>
+	</xsl:template>
+	
 </xsl:stylesheet>
