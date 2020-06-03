@@ -1,12 +1,12 @@
 # XML_Project
 XML Project uni assignment Basketball Shop
 
-The Projec contains of:
-* XML
-* CSS
-* DTD
-* XSD
-* XSLT
+## The Project contains of:
+* ### XML
+* ### CSS
+* ### DTD
+* ### XSD
+* ### XSLT
 
 
 ## CSS
