@@ -7,7 +7,7 @@
 			<head>
 				<style>
 					table,th,td {border: 1px solid black; padding: 15px;margin: 0px;}
-					table{opacity: 0.85;margin-left:auto;margin-right:auto;border-spacing: 0;border-collapse: collapse;text-align:center;background-color: white;}
+					table{opacity: 0.9;margin-left:auto;margin-right:auto;border-spacing: 0;border-collapse: collapse;text-align:center;background-color: white;}
 					th{background-color: black; color: white;}
 					body{;background: rgb(255,255,255);
 					background: linear-gradient(60deg, rgba(255,255,255,1) 0%,
@@ -83,7 +83,7 @@
 	
 	<xsl:template match="Products">
 		<tr>
-			<th>prod_id</th>
+			<th>Product id</th>
 			<th>Name</th>
 			<th>Price</th>
 			<th>Description</th>
@@ -92,7 +92,7 @@
 		<tr>
 			<td><xsl:value-of select="@prod_id"/></td>
 			<td><xsl:value-of select="Name"/></td>
-			<td><xsl:value-of select="Price"/></td>
+			<td><xsl:value-of select="Price"/> zł</td>
 			<td><xsl:value-of select="Description"/></td>
 		</tr>
 		</xsl:for-each>
