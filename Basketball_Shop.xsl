@@ -30,7 +30,19 @@
 				</table>
 				<br/>
 				<div id="menu">
-					<h3><b>MENU</b></h3><br/>
+					<h2><b>MENU</b></h2><br/>
+					Sort Products by:
+					<form>
+						<input type="radio" id="id_rad" name="rad" value="prod_id" onclick="mySort(0)"/>
+						<label for="id_rad">Product id</label><br/>
+						<input type="radio" id="n_rad" name="rad" value="n_rad" onclick="mySort(1)"/>
+						<label for="n_rad">Name</label><br/>
+						<input type="radio" id="pr_rad" name="rad" value="p_rad" onclick="mySort(2)"/>
+						<label for="pr_rad">Price</label><br/>
+						<input type="radio" id="d_rad" name="rad" value="d_rad" onclick="mySort(3)"/>
+						<label for="d_rad">Description</label><br/>
+						
+					</form>
 					<form>
 						<label for="search">Search by Name</label><br/>
 						<input type="text" id="search" name="search" value="5" oninput="mySearch();"/><br/>
