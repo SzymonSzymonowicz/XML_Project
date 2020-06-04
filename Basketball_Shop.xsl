@@ -31,21 +31,43 @@
 				<br/>
 				<div id="menu">
 					<h2><b>MENU</b></h2><br/>
-					Sort Products by:
+					
+					<b>Add a product</b>
 					<form>
-						<input type="radio" id="id_rad" name="rad" value="prod_id" onclick="mySort(0)"/>
+						<label for="idAdd">Product id:</label>
+						<input type="text" id="idAdd"/><br/>
+						<label for="nameAdd">Name:</label>
+						<input type="text" id="nameAdd"/><br/>
+						<label for="priceAdd">Price:</label>
+						<input type="text" id="priceAdd"/><br/>
+						<label for="descAdd">Description:</label>
+						<input type="text" id="descAdd"/><br/>
+					</form>
+					<button type="button" onclick="myAdd()">ADD</button><br/>
+					
+					
+					<b>Sort Products by:</b>
+					<form>
+						<input type="radio" id="id_rad" name="sort" onclick="mySort(0)"/>
 						<label for="id_rad">Product id</label><br/>
-						<input type="radio" id="n_rad" name="rad" value="n_rad" onclick="mySort(1)"/>
+						<input type="radio" id="n_rad" name="sort" onclick="mySort(1)"/>
 						<label for="n_rad">Name</label><br/>
-						<input type="radio" id="pr_rad" name="rad" value="p_rad" onclick="mySort(2)"/>
+						<input type="radio" id="pr_rad" name="sort" onclick="mySort(2)"/>
 						<label for="pr_rad">Price</label><br/>
-						<input type="radio" id="d_rad" name="rad" value="d_rad" onclick="mySort(3)"/>
+						<input type="radio" id="d_rad" name="sort" onclick="mySort(3)"/>
 						<label for="d_rad">Description</label><br/>
 						
 					</form>
 					<form>
-						<label for="search">Search by Name</label><br/>
-						<input type="text" id="search" name="search" value="5" oninput="mySearch();"/><br/>
+						<label for="searchOpt"><b>Search by:</b></label>
+						<select name="searchOpt" id="searchOpt" float="left">
+							<option value="0">Product id</option>
+							<option value="1">Name</option>
+							<option value="2">Price</option>
+							<option value="3">Description</option>
+						</select><br/>
+						<label for="search"><b>Value:</b></label><br/>
+						<input type="text" id="search" name="search" oninput="mySearch();"/><br/>
 					</form><br/>
 					<div id="searchResult" style="display: none;">
 						<table>
