@@ -81,11 +81,11 @@ function myAdd(){
 		alert('Can\'t add ! There is at least one given value, which is empty !!!');
 		return;
 	}
-	if(!(/_3\d{3}/.test(newId))){
+	if(!(/^_3\d{3}$/.test(newId))){
 		alert('Can\'t add ! Product id doesn\'t match regex:  [_3\\d{3}]  !!!');
 		return;
 	}
-	if(!(/\d+\.\d{2} zł/.test(newPrice))){
+	if(!(/^\d+\.\d{2} zł$/.test(newPrice))){
 		alert('Can\'t add ! Product price doesn\'t match regex:  [\\d+\\.\\d{2} zł]  !!!');
 		return;
 	}
@@ -122,11 +122,11 @@ function myEdit(){
 		alert('Can\'t edit ! There is at least one given value, which is empty !!!');
 		return;
 	}
-	if(!(/_3\d{3}/.test(idEd))){
+	if(!(/^_3\d{3}$/.test(idEd))){
 		alert('Can\'t edit ! Product id doesn\'t match regex:  [_3\\d{3}]  !!!');
 		return;
 	}
-	if(!(/\d+\.\d{2} zł/.test(priceEd))){
+	if(!(/^\d+\.\d{2} zł$/.test(priceEd))){
 		alert('Can\'t edit ! Product price doesn\'t match regex:  [\\d+\\.\\d{2} zł]  !!!');
 		return;
 	}
