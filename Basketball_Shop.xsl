@@ -9,16 +9,50 @@
 					table,th,td {border: 1px solid black; padding: 15px;margin: 0px;}
 					table{opacity: 0.9;margin-left:auto;margin-right:auto;border-spacing: 0;border-collapse: collapse;text-align:center;background-color: white;}
 					th{background-color: black; color: white;}
-					body{;background: rgb(255,255,255);
+					body{
+					background: rgb(255,255,255);
 					background: linear-gradient(60deg, rgba(255,255,255,1) 0%,
 					rgba(186,172,131,1) 35%, rgba(0,212,255,1) 100%);}
-				</style>	
+					#menu{
+					display: table;
+					margin: auto;
+					text-align: center;
+					background-color: white;
+					width: 400px;
+					border: 1px solid black;
+					padding: 10px;}
+				</style>
+				
 			</head>
 			<body>
-				<table>
+				<table id="prodTable">
 					<xsl:apply-templates select="Products"/>
 				</table>
-				<br/><br/>
+				<br/>
+				<div id="menu">
+					<h3><b>MENU</b></h3><br/>
+					<form>
+						<label for="search">Search by Name</label><br/>
+						<input type="text" id="search" name="search" value="5" oninput="mySearch();"/><br/>
+					</form><br/>
+					<div id="searchResult" style="display: none;">
+						<table>
+							<tr>
+								<th>Product id</th>
+								<th>Name</th>
+								<th>Price</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td id="scell_1"></td>
+								<td id="scell_2"></td>
+								<td id="scell_3"></td>
+								<td id="scell_4"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<br/>
 				<table>
 					<tr>
 						<th colspan="2">Number of</th>
@@ -76,6 +110,7 @@
 				<table>
 					<xsl:apply-templates select="Adresses"/>
 				</table>
+				<script type="text/javascript" lang="javascript" src="Script.js"></script>
 			</body>
 		</html>
 	</xsl:template>
