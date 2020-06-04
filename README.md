@@ -7,7 +7,7 @@ XML Project uni assignment Basketball Shop
 * ### DTD
 * ### XSD
 * ### XSLT
-
+* ### JS DOM ([Link](http://sigma.ug.edu.pl/~sszymonowicz/) to html, which was generated from XSLT + JS) 
 
 ## CSS
 ![JOrrJa.png](https://iili.io/JOrrJa.png)
@@ -17,3 +17,5 @@ XML Project uni assignment Basketball Shop
 ![JOr6Ov.png](https://iili.io/JOr6Ov.png)
 ## XSD validation
 ![JOrPbR.png](https://iili.io/JOrPbR.png)
+## JS DOM + XSLT
+![JeFPpf.png](https://iili.io/JeFPpf.png)
